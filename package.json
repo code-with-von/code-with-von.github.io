@@ -1,0 +1,51 @@
+{
+  "name": "code-with-vs.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently \"npm run watch:pug\" \"npm run watch:pug/internals\"  \"npm run watch:js\" \"npm run watch:img\" \"npm run watch:css\"",
+    "build": "concurrently \"npm run build:pug\" \"npm run build:pug/internals\" \"npm run build:js\" \"npm run build:img\" \"npm run build:css\"",
+    "dev:open": "parcel ./src/index.pug --open chrome",
+    "watch:pug": "parcel watch ./src/*.pug --dist-dir ./dist/ --public-url ./",
+    "build:pug": "parcel build ./src/*.pug --dist-dir ./docs/ --public-url ./ --no-content-hash",
+    "watch:pug/internals": "parcel watch ./src/internals/* --dist-dir ./dist/internals --public-url ./",
+    "build:pug/internals": "parcel build ./src/internals/* --dist-dir ./docs/internals --public-url ./ --no-content-hash",
+    "watch:js": "parcel watch ./src/js/index.js --dist-dir ./dist/js --public-url ./",
+    "build:js": "parcel build ./src/js/index.js --dist-dir ./docs/js --public-url ./ --no-content-hash",
+    "watch:img": "parcel watch ./src/img/* --dist-dir ./dist/img --public-url ./",
+    "build:img": "parcel build ./src/img/* --dist-dir ./docs/img --public-url ./ --no-content-hash",
+    "watch:css": "parcel watch ./src/css/styles.css --dist-dir ./dist/css --public-url ./",
+    "build:css": "parcel build ./src/css/styles.css --dist-dir ./docs/css --public-url ./ --no-content-hash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.9.1",
+    "assert": "^2.0.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "concurrently": "^8.1.0",
+    "crypto-browserify": "^3.12.0",
+    "cssnano": "^6.0.1",
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.4.24",
+    "process": "^0.11.10",
+    "pug": "^3.0.2",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "axios": "^1.4.0",
+    "jquery": "^3.7.0",
+    "mailchimp-api-v3": "^1.15.0",
+    "mailslurp-client": "^15.17.1"
+  }
+}
