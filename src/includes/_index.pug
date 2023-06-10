@@ -1,0 +1,24 @@
+main.align-items-center.m-3
+  .card.container.py-5
+    h1 Volte em breve
+    h4 Logo esse site estará ativo com conteúdos exclusivos
+
+    p.border-bottom.my-2.py-1 Que tal receber notificações sobre o progresso de desenvolvimento? Basta de inscrever, usando o formuárlio abaixo!
+
+    form.mt-5.container-fluid.needs-validation.w-50(action="https://github.us21.list-manage.com/subscribe/post?u=a2c527b96bad849814b752c34&amp;id=a77d47d833&amp;f_id=00e559e1f0" method="post")
+      .col
+        .form-floating.mb-n1
+          input.form-control(type='text', id='mce-FNAME', name='FNAME', placeholder='José', required)
+          label(for='mce-FNAME') Entre seu nome
+          .invalid-feedback Por favor forneça seu nome.
+        .form-floating.m-n1
+          input.form-control(type='text', id='mce-LNAME', name='LNAME', placeholder='Almeida')
+          label(for='mce-LNAME') Entre seu sobrenome
+        .form-floating.mb-3
+          input.form-control(type='email', id='mce-EMAIL', name='EMAIL', placeholder='email@email.com', required)
+          label(for='mce-EMAIL') Entre seu email
+          .invalid-feedback Por favor forneça seu email.
+        button.btn.btn-primary(type="submit")
+          span.bi.bi-envelope-at-fill  Quero emails informativos
+        div(style="position: absolute; left: -5000px;")
+          input(type="text",name="b_a2c527b96bad849814b752c34_a77d47d833",tabindex="-1", value="", hidden)

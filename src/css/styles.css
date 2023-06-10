@@ -1,0 +1,73 @@
+:root {
+  --overlayLightBlue: #3d7cb699;
+  --cardBg: #1b1c1d99;
+  --btn-primary-bg: #f1f6f9;
+  --btn-primary-text: #212a3e;
+  --btn-primary-text-hover: #f1f6f9;
+  --btn-primary-bg-hover: #394867;
+}
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  font-family: 'Sansation', sans-serif;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  background-image: url('https://picsum.photos/id/60/1920/1080');
+}
+
+.cover-container {
+  min-width: 42em;
+}
+
+
+.overlay {
+  background-color: var(--overlayLightBlue);
+  width: 1920px;
+  height: fit-content;
+}
+
+.card {
+  max-width: 50%;
+  background-color: var(--cardBg);
+  color: var(--btn-primary-text-hover)
+}
+
+.btn-primary {
+  --bs-btn-color: var(--btn-primary-text);
+  --bs-btn-bg: var(--btn-primary-bg);
+  --bs-btn-hover-color: var(--btn-primary-text-hover);
+  --bs-btn-hover-bg: var(--btn-primary-bg-hover);
+  --bs-btn-active-color: var(--bs-btn-color);
+  --bs-btn-active-bg: var(--bs-btn-bg);
+  border: none;
+}
+
+#mce-FNAME {
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+}
+
+#mce-LNAME {
+  border-radius: 0%;
+}
+
+#mce-EMAIL {
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
+}
+
+.custom-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: var(--btn-primary-text-hover);
+  --bs-popover-bg: var(--btn-primary-text-hover);
+  --bs-popover-body-color: var(--btn-primary-bg-hover);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}
+
+.copy {
+  font-size: 0.7rem
+}
+
+.p-left {
+  text-align: left;
+}
